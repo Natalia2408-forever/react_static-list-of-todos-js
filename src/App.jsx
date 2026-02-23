@@ -1,7 +1,6 @@
 import './App.scss';
 
 import { TodoList } from './components/TodoList/TodoList';
-import { UserInfo } from './components/UserInfo';
 import todosFromServer from './api/todos.json';
 import usersFromServer from './api/users.json';
 
@@ -17,7 +16,6 @@ export const todos = todosFromServer.map(todo => ({
 export const App = () => (
   <div className="App">
     <h1 className="App__title">Static list of todos</h1>
-    <TodoList />
-    <UserInfo />
+    <TodoList todos={todos} />
   </div>
 );
